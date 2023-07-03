@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="hangman.js"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <title>Hangman!</title>
 </head>
 <body>
     <h1>Lets Play Hangman!</h1>
+    <div id="image-container">
+        <div id="hangman-image"></div>
+    </div>
   <div id="word-container"></div>
-  <div id="guesses"></div>
-  <div id="image-container"></div>
+  <div id="guesses">Guesses Remaining: <span id= "remaining-guesses"></span></div>
   <div id="letter-bank"></div>
 
+  <script src="hangman.js"></script>
 </body>
 </html>
