@@ -85,3 +85,36 @@ function checkGameStatus() {
 const wordContainer = document.getElementById("word-container");
 const wordState = wordContainer.textContent.replace(/\s/g, "");
 
+// Check if the word has been completely guessed
+if (wordState === chosenWord) {
+    endGame(true);
+    return;
+  }
+  
+  // Check if the player has run out of guesses
+  if (remainingGuesses === 0) {
+    endGame(false);
+    return;
+  }
+  }
+  
+  function endGame(hasWon) {
+  const letterBank = document.getElementsByClassName("letter");
+  for (let i = 0; i < letterBank.length; i++) {
+    letterBank[i].removeEventListener("click", handleLetterClick);
+  }
+  
+  if (hasWon) {
+    alert("Congratulations! You won!");
+  } else {
+    alert(`Game over! The word was "${chosenWord}".`);
+  }
+  
+  // Start a new game after displaying the result
+  startGame();
+  }
+  
+  // Start the game
+  startGame();
+  
+  
