@@ -8,7 +8,7 @@
     cursor: pointer;
     font-size: 20px; 
     color: black; 
-  
+}
   .letter:hover {
     background-color: gray;
     color: rgb(146, 31, 31);
@@ -37,5 +37,29 @@
     background-position: center;
   }
   
+h1{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  body{
+    background-color: rgba(3, 4, 4, 0.853);
+  }
 
-  
+  #guesses{
+    color: grey;
+    text-align:center;
+  }
+
+  button{
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 40px;
+    width: 15%;
+    
+  }

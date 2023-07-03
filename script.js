@@ -38,7 +38,8 @@ if (!guessedLetters.includes(guessedLetter)) {
 
 function updateWordContainer() {
 const wordContainer = document.getElementById("word-container");
-wordContainer.innerHTML = ""; // Clear previous content
+wordContainer.innerHTML = ""; 
+
 
 // Display the current state of the word
 for (let i = 0; i < chosenWord.length; i++) {
@@ -104,17 +105,23 @@ if (wordState === chosenWord) {
     letterBank[i].removeEventListener("click", handleLetterClick);
   }
   
+updatePlayAgainButton(true);
+
   if (hasWon) {
     alert("Congratulations! You won!");
   } else {
     alert(`Game over! The word was "${chosenWord}".`);
   }
-  
-  // Start a new game after displaying the result
-  startGame();
+}
+  function updatePlayAgainButton(show) {
+    const playAgainButton = document.getElementById("play-again");
+    playAgainButton.style.display = show ? "block" : "none";
   }
   
+  function playAgain() {
+    startGame();
+  }
+
+ 
   // Start the game
   startGame();
-  
-  
