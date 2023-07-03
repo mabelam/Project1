@@ -7,7 +7,7 @@
     background-color: rgb(51, 5, 5);
     cursor: pointer;
     font-size: 20px; 
-    color: black; 
+    color: white; 
 }
   .letter:hover {
     background-color: gray;
@@ -27,6 +27,8 @@
 #image-container {
     position: relative;
     margin-bottom: 20px;
+    height: 60vh;
+    width: 60vh;
   }
   
   #hangman-image {
@@ -46,6 +48,11 @@ h1{
 }
   body{
     background-color: rgba(3, 4, 4, 0.853);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
   }
 
   #guesses{
@@ -62,4 +69,8 @@ h1{
     bottom: 40px;
     width: 15%;
     
+  }
+
+  #wordContainer{
+    text-align: center;
   }

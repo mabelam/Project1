@@ -62,21 +62,24 @@ function imageContainer() {
 const imageContainer = document.getElementById("remaining-guesses");
 remainingGuessesContainer.textContent = remainingGuesses.toString; 
 
-const hangmanImage = document.getElementById("hangman-image");
-hangmanImage.style.backgroundImage = `url(images/hangman${maxGuesses - remainingGuesses}.png)`;
+let hangmanImage = document.createElement("img");
+// hangmanImage.src = `images/hangman${maxGuesses - remainingGuesses}.png`;
+hangmanImage.src = "images/hangman0.png";
+hangmanImage.style.objectFit = "cover";
+imageContainer.appendChild(hangmanImage);
 }
 
 
 function createLetterBank() {
 const letterBankContainer = document.getElementById("letter-bank");
-letterBankContainer.innerHTML = ""; 
+// letterBankContainer.innerHTML = ""; 
 
 // Create letter divs for the letter bank
 const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 for (let i = 0; i < letters.length; i++) {
   const letter = letters[i];
   const letterDiv = document.createElement("div");
-  letterDiv.textContent = letter;
+  letterDiv.innerText = letter;
   letterDiv.classList.add("letter");
   letterBankContainer.appendChild(letterDiv);
     }
